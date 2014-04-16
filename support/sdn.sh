@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [[ $EUID -ne 0 ]]; then
+    echo 'Dont forget to use sudo ;-)'
+    exit 1
+fi
+
 FWD_ROOT="/root/ofsoftswitch13"
 CNT_SCRIPT="/root/ryu/ryu/app/experimenter_switch.py"
 
