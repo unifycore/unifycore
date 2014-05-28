@@ -1,0 +1,11 @@
+--- src/nbprotodb/expressions.cpp	2014-05-28 12:06:40.276836553 +0200
++++ src/nbprotodb/expressions.cpp	2014-05-28 11:57:46.797965194 +0200
+@@ -75,7 +75,7 @@
+ 
+ 	protodb_lex_init(ExprString);
+ 
+-    if (pdl_parse((void **) AllocatedExprTree) != 0)
++    if (pdl_parse((void *) AllocatedExprTree) != 0)
+     {
+ 		protodb_lex_cleanup();
+ 		return nbFAILURE;
