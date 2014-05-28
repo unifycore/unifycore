@@ -1,0 +1,11 @@
+--- src/nbpflcompiler/gramm.y.orig	2014-05-28 11:32:43.430303422 +0200
++++ src/nbpflcompiler/gramm.y	2014-05-28 11:31:13.577912342 +0200
+@@ -65,6 +65,8 @@
+ int pfl_lex (YYSTYPE *lvalp, YYLTYPE *llocp, struct ParserInfo *parserInfo);
+ int pfl_error(YYLTYPE *llocp, struct ParserInfo *parserInfo, const char *s);
+ 
++YYLTYPE pfl_lloc;
++
+ PFLExpression *GenUnOpNode(PFLOperator op, PFLExpression *kid);
+ PFLExpression *GenBinOpNode(PFLOperator op, PFLExpression *kid1, PFLExpression *kid2);
+ PFLExpression *GenTermNode(SymbolProto *protocol, Node *irExpr);
