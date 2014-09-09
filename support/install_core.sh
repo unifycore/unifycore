@@ -13,27 +13,29 @@ git config --global user.email jan@skalny.sk
 cd
 git clone git://git.osmocom.org/libosmocore.git
 git clone git://git.osmocom.org/libosmo-abis.git
+git clone git://git.osmocom.org/libosmo-netif.git
 git clone git://git.osmocom.org/openggsn.git
-git clone git://github.com/gprs-sdn/openbsc.git
-git clone git://github.com/gprs-sdn/gprs-sdn.git
-git clone git://github.com/gprs-sdn/ryu.git
-git clone git://github.com/gprs-sdn/ofsoftswitch13.git
+git clone git://github.com/unifycore/openbsc.git
+git clone git://github.com/unifycore/unifycore.git
+git clone git://github.com/unifycore/ryu.git
+git clone git://github.com/unifycore/ofsoftswitch13.git
 
-cd ~/ryu ; git remote set-url origin git@github.com:gprs-sdn/ryu.git
-cd ~/ofsoftswitch13 ; git remote set-url origin git@github.com:gprs-sdn/ofsoftswitch13.git
-cd ~/gprs-sdn ; git remote set-url origin git@github.com:gprs-sdn/gprs-sdn.git
-cd ~/openbsc ; git remote set-url origin git@github.com:gprs-sdn/openbsc.git
+cd ~/ryu ; git remote set-url origin git@github.com:unifycore/ryu.git
+cd ~/ofsoftswitch13 ; git remote set-url origin git@github.com:unifycore/ofsoftswitch13.git
+cd ~/unifycore ; git remote set-url origin git@github.com:unifycore/unifycore.git
+cd ~/openbsc ; git remote set-url origin git@github.com:unifycore/openbsc.git
 
 cd ~/openggsn; libtoolize -c -f -i ; autoreconf; automake --add-missing; autoreconf; autoconf; automake; ./configure --prefix=/usr/local; make -j 2; make install ; ldconfig
 cd ~/libosmocore; autoreconf -fi; ./configure; make; make install; ldconfig
 cd ~/libosmo-abis; autoreconf -fi; ./configure; make; make install; ldconfig
+cd ~/libosmo-netif; autoreconf -fi; ./configure; make; make install; ldconfig
 cd ~/openbsc/openbsc; autoreconf -fi; export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig; ./configure; make
 
 cd ~/
 wget http://www.nbee.org/download/nbeesrc-jan-10-2013.php -O nbee.zip && unzip nbee.zip && rm nbee.zip
 cd ~/nbeesrc-jan-10-2013/
-patch src/nbpflcompiler/gramm.y < ~/gprs-sdn/patches/nbeesrc-jan-10-2013/bison3.diff 
-patch src/nbprotodb/expressions.cpp < ~/gprs-sdn/patches/nbeesrc-jan-10-2013/bison26.diff 
+patch src/nbpflcompiler/gramm.y < ~/unifycore/patches/nbeesrc-jan-10-2013/bison3.diff 
+patch src/nbprotodb/expressions.cpp < ~/unifycore/patches/nbeesrc-jan-10-2013/bison26.diff 
 cd ~/nbeesrc-jan-10-2013/src/
 cmake .
 make
@@ -52,12 +54,8 @@ cd ~/ryu
 python ./setup.py install
 pip install networkx
 
-cp ~/gprs-sdn/
-
 
 echo "172.20.255.254  internet" >> /etc/hosts
 echo "dhcp-range=192.168.27.100,192.168.27.200,12h" >> /etc/dnsmasq.conf
 echo "interface=vgsn0" >> /etc/dnsmasq.conf
-
-
 
