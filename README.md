@@ -8,10 +8,6 @@ gprs-sdn
 |                                                 |
 |-------------------------------------------------|
 
-
-
-
-
 UnifyCore project developed on FIIT STU (Faculty of informatics and information technologies, Slovak university of technology in Bratislava).
 Credits to all projects used go to:
 Ryu SDN framework   http://osrg.github.io/ryu/
