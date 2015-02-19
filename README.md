@@ -10,10 +10,10 @@ gprs-sdn
 
 UnifyCore project developed on FIIT STU (Faculty of informatics and information technologies, Slovak university of technology in Bratislava).
 Credits to all projects used go to:
--Ryu SDN framework   http://osrg.github.io/ryu/
--CPqD/ofsoftswitch13 https://github.com/CPqD/ofsoftswitch13
--OpenBSC suite       http://openbsc.osmocom.org/trac/wiki/OpenBSC
--OpenGGSN            http://sourceforge.net/projects/ggsn/
+- Ryu SDN framework   http://osrg.github.io/ryu/
+- CPqD/ofsoftswitch13 https://github.com/CPqD/ofsoftswitch13
+- OpenBSC suite       http://openbsc.osmocom.org/trac/wiki/OpenBSC
+- OpenGGSN            http://sourceforge.net/projects/ggsn/
 
 
 
@@ -21,23 +21,23 @@ Credits to all projects used go to:
 
 Tech Leads:
 ****************************************
--Martin Nagy
--Ivan Kotuliak
+- Martin Nagy
+- Ivan Kotuliak
 
 Lead Developers: (in alphabetical order)
 ****************************************
--Tibor Hirjak
--Martin Kalcok
--Jan Skalny
+- Tibor Hirjak
+- Martin Kalcok
+- Jan Skalny
 
 Feature developers (work in progress)
 *****************************************
--Kamil Burda (Port Control Protocol (PCP) NAT feature developement)
--Rudolf Grezo (Tunnel management and traffic engineering developement)
--Marek Hasin (LTE feature developement)
--Michal Palatinus (Observation and management GUI developement)
--Matus Krizan
--Peter Balga
+- Kamil Burda (Port Control Protocol (PCP) NAT feature developement)
+- Rudolf Grezo (Tunnel management and traffic engineering developement)
+- Marek Hasin (LTE feature developement)
+- Michal Palatinus (Observation and management GUI developement)
+- Matus Krizan
+- Peter Balga
 
 
 
@@ -47,9 +47,9 @@ INSTALLATION
 -------------
 
 Prerequisities (tested setup): 
--Oracle VirtualBox 4.3.20r96997
--Ubuntu Server 14.04 amd64 (not 14.04.1)
--Sources from the Unifycore GitHub (https://github.com/unifycore/unifycore)
+- Oracle VirtualBox 4.3.20r96997
+- Ubuntu Server 14.04 amd64 (not 14.04.1)
+- Sources from the Unifycore GitHub (https://github.com/unifycore/unifycore)
 
 Optional:
 OpenBSC compliant BTS (hardware of software emulation) in order to experiment with GSM/GPRS part of the technology (we use sysmocom sysmoBTS and it is working).
