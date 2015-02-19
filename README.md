@@ -1,19 +1,19 @@
 gprs-sdn
 ========
-|-------------------------------------------------|
-|                                                 |
-| File:   UnifyCore ReadMe and Installation guide |
-| Date:   2-19-2015                               |
-| Author: Martin Nagy                             |
-|                                                 |
-|-------------------------------------------------|
+| ------------------------------------------------- |
+|                                                   |
+| File:   UnifyCore ReadMe and Installation guide   |
+| Date:   2-19-2015                                 |
+| Author: Martin Nagy                               |
+|                                                   |
+| ------------------------------------------------- |
 
 UnifyCore project developed on FIIT STU (Faculty of informatics and information technologies, Slovak university of technology in Bratislava).
 Credits to all projects used go to:
-Ryu SDN framework   http://osrg.github.io/ryu/
-CPqD/ofsoftswitch13 https://github.com/CPqD/ofsoftswitch13
-OpenBSC suite       http://openbsc.osmocom.org/trac/wiki/OpenBSC
-OpenGGSN            http://sourceforge.net/projects/ggsn/
+-Ryu SDN framework   http://osrg.github.io/ryu/
+-CPqD/ofsoftswitch13 https://github.com/CPqD/ofsoftswitch13
+-OpenBSC suite       http://openbsc.osmocom.org/trac/wiki/OpenBSC
+-OpenGGSN            http://sourceforge.net/projects/ggsn/
 
 
 
@@ -21,23 +21,23 @@ OpenGGSN            http://sourceforge.net/projects/ggsn/
 
 Tech Leads:
 ****************************************
-Martin Nagy
-Ivan Kotuliak
+-Martin Nagy
+-Ivan Kotuliak
 
 Lead Developers: (in alphabetical order)
 ****************************************
-Tibor Hirjak
-Martin Kalcok
-Jan Skalny
+-Tibor Hirjak
+-Martin Kalcok
+-Jan Skalny
 
 Feature developers (work in progress)
 *****************************************
-Kamil Burda (Port Control Protocol (PCP) NAT feature developement)
-Rudolf Grezo (Tunnel management and traffic engineering developement)
-Marek Hasin (LTE feature developement)
-Michal Palatinus (Observation and management GUI developement)
-Matus Krizan
-Peter Balga
+-Kamil Burda (Port Control Protocol (PCP) NAT feature developement)
+-Rudolf Grezo (Tunnel management and traffic engineering developement)
+-Marek Hasin (LTE feature developement)
+-Michal Palatinus (Observation and management GUI developement)
+-Matus Krizan
+-Peter Balga
 
 
 
@@ -47,9 +47,9 @@ INSTALLATION
 -------------
 
 Prerequisities (tested setup): 
-Oracle VirtualBox 4.3.20r96997
-Ubuntu Server 14.04 amd64 (not 14.04.1)
-Sources from the Unifycore GitHub (https://github.com/unifycore/unifycore)
+-Oracle VirtualBox 4.3.20r96997
+-Ubuntu Server 14.04 amd64 (not 14.04.1)
+-Sources from the Unifycore GitHub (https://github.com/unifycore/unifycore)
 
 Optional:
 OpenBSC compliant BTS (hardware of software emulation) in order to experiment with GSM/GPRS part of the technology (we use sysmocom sysmoBTS and it is working).
@@ -112,16 +112,15 @@ ryu/ryu/app/magic.py
 COMMON ISSUES
 --------------
 
-1.Traceback (in /tmp/controller.log)
+1. Traceback (in /tmp/controller.log)
 ...
 File "/usr/lib/python2.7/dist-packages/pkg_resources.py", line 628, in resolve
     raise DistributionNotFound(req)
 pkg_resources.DistributionNotFound: pbr>=0.6,!=0.7,<1.0
 -wrong version of python-pbr installed. Install different version o pbr, for example from pip
 
-2.Traceback (in /tmp/controller.log)
+2. Traceback (in /tmp/controller.log)
 ...
-
 ImportError: No module named magic
 -wrong path in the FWD_ROOT and CNT_SCRIPT variables in sdn.sh launch script. Correct the path according to your setup (where is your ofsoftswitch and ryu installed).
 
@@ -129,15 +128,15 @@ ImportError: No module named magic
 USEFUL SCRIPTS
 --------------
 
-1.Installation
+1. Installation
 -installs all applications and dependencies needed to run the project
 unifycore/support/install_core.sh
 
-2.Deployment
+2. Deployment
 -sets up the virtual interfaces, fotwarders and links between them (sample topology)
 unifycore/support/network_init.sh
 
-3.Running the mobile SDN core
+3. Running the mobile SDN core
 -starts/stops/restarts the controllers and forwarders
 unifycore/support/sdn.sh [start|stop|restart]
 
@@ -145,4 +144,4 @@ unifycore/support/sdn.sh [start|stop|restart]
 SUPPORT
 --------
 
-unifycore-dev@googlegroups.com
+unifycore-dev[at]googlegroups.com
