@@ -18,7 +18,6 @@ Credits to all projects used go to:
 
 
 
-
 Tech Leads:
 ****************************************
 - Martin Nagy
