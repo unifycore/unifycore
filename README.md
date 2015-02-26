@@ -8,27 +8,28 @@ gprs-sdn
     |                                                   |
     | ------------------------------------------------- |
 
-    $$$$$$$$\ $$$$$$\ $$$$$$\ $$$$$$$$\        $$$$$$\ $$$$$$$$\ $$\   $$\              
-    $$  _____|\_$$  _|\_$$  _|\__$$  __|      $$  __$$\\__$$  __|$$ |  $$ |             
-    $$ |        $$ |    $$ |     $$ |         $$ /  \__|  $$ |   $$ |  $$ |             
-    $$$$$\      $$ |    $$ |     $$ |         \$$$$$$\    $$ |   $$ |  $$ |             
-    $$  __|     $$ |    $$ |     $$ |          \____$$\   $$ |   $$ |  $$ |             
-    $$ |        $$ |    $$ |     $$ |         $$\   $$ |  $$ |   $$ |  $$ |             
-    $$ |      $$$$$$\ $$$$$$\    $$ |         \$$$$$$  |  $$ |   \$$$$$$  |             
-    \__|      \______|\______|   \__|          \______/   \__|    \______/              
+    $$$$$$$$\ $$$$$$\ $$$$$$\ $$$$$$$$\        $$$$$$\ $$$$$$$$\ $$\   $$\
+    $$  _____|\_$$  _|\_$$  _|\__$$  __|      $$  __$$\\__$$  __|$$ |  $$ |
+    $$ |        $$ |    $$ |     $$ |         $$ /  \__|  $$ |   $$ |  $$ |
+    $$$$$\      $$ |    $$ |     $$ |         \$$$$$$\    $$ |   $$ |  $$ |
+    $$  __|     $$ |    $$ |     $$ |          \____$$\   $$ |   $$ |  $$ |
+    $$ |        $$ |    $$ |     $$ |         $$\   $$ |  $$ |   $$ |  $$ |
+    $$ |      $$$$$$\ $$$$$$\    $$ |         \$$$$$$  |  $$ |   \$$$$$$  |
+    \__|      \______|\______|   \__|          \______/   \__|    \______/
 
-                                                                                        
-                       /$$ /$$$$$$                                             
-                      |__//$$__  $$                                            
+
+                       /$$ /$$$$$$
+                      |__//$$__  $$
      /$$   /$$/$$$$$$$ /$| $$  \__/$$   /$$ /$$$$$$$ /$$$$$$  /$$$$$$  /$$$$$$ 
     | $$  | $| $$__  $| $| $$$$  | $$  | $$/$$_____//$$__  $$/$$__  $$/$$__  $$
     | $$  | $| $$  \ $| $| $$_/  | $$  | $| $$     | $$  \ $| $$  \__| $$$$$$$$
     | $$  | $| $$  | $| $| $$    | $$  | $| $$     | $$  | $| $$     | $$_____/
     |  $$$$$$| $$  | $| $| $$    |  $$$$$$|  $$$$$$|  $$$$$$| $$     |  $$$$$$$
      \______/|__/  |__|__|__/     \____  $$\_______/\______/|__/      \_______/
-                                  /$$  | $$                                    
-                                 |  $$$$$$/                                    
-                                  \______/                                                                                                                                
+                                  /$$  | $$
+                                 |  $$$$$$/
+                                  \______/
+
 UnifyCore project developed on FIIT STU (Faculty of informatics and information technologies, Slovak university of technology in Bratislava). Unifycore is a simplistic SDN based GPRS network architecture.
 
 Credits to all projects used go to:
@@ -118,35 +119,39 @@ SAMPLE DEPLOYMENT TOPOLOGY
                /          |--------|
                /          |  vgsn0 |
                /          |--------|
-    (|)        /              |			   
-     |         /              |a2			   
+    (|)        /              |
+     |         /              |a2 
      |------|  /eth2    a1|--------|a3       b1|--------|b3   c1|--------|c3       iptables---> eth0
      | bss0 |-------------| X0000a |-----------| X0000b |-------| X0000c |---------------
      |------|  /          |--------|           |--------|       |--------|internet0
                /              |a4             /b2                   |c2
                /              |      /-------/                      |
-               /              |d1   /d2                             |e2 
-               /          |--------|                            |--------|  
+               /              |d1   /d2                             |e2
+               /          |--------|                            |--------|
                /          | X0000d |----------------------------| X0000e |
                /          |--------|d3                        e1|--------|
                /
                /LINUX MACHINE-----------------------------------------------------------
 
 
-- bss0      Base Station Subsystem - in our case sysmoBTS model
-- vgsn0     Interface towards combined GPRS signalization entity - vgsn
-- internet0 Internet backbone interface
-- X0000X    ofsoftswitch13 OpenFlow forwarders 
+- bss0
+  - Base Station Subsystem - in our case sysmoBTS model
+- vgsn0
+  - Interface towards combined GPRS signalization entity - vgsn
+- internet0
+  - Internet backbone interface
+- X0000X
+  - ofsoftswitch13 OpenFlow forwarders 
 
 
 DEBUG
 ------
 
 1. Logs of the unifycore are located in /tmp
-- controller.log
-- dpa.log
-- dpb.log
-- ...
+  - controller.log
+  - dpa.log
+  - dpb.log
+  - ...
 
 2. Restart of the solution/topology
 unifycore/support/sdn.sh [start|stop|restart]
