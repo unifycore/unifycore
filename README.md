@@ -1,14 +1,38 @@
 gprs-sdn
 ========
-| ------------------------------------------------- |
-|                                                   |
-| File:   UnifyCore ReadMe and Installation guide   |
-| Date:   2-19-2015                                 |
-| Author: Martin Nagy                               |
-|                                                   |
-| ------------------------------------------------- |
+    | ------------------------------------------------- |
+    |                                                   |
+    | File:   UnifyCore ReadMe and Installation guide   |
+    | Date:   2-19-2015                                 |
+    | Author: Martin Nagy                               |
+    |                                                   |
+    | ------------------------------------------------- |
 
-UnifyCore project developed on FIIT STU (Faculty of informatics and information technologies, Slovak university of technology in Bratislava).
+    $$$$$$$$\ $$$$$$\ $$$$$$\ $$$$$$$$\        $$$$$$\ $$$$$$$$\ $$\   $$\              
+    $$  _____|\_$$  _|\_$$  _|\__$$  __|      $$  __$$\\__$$  __|$$ |  $$ |             
+    $$ |        $$ |    $$ |     $$ |         $$ /  \__|  $$ |   $$ |  $$ |             
+    $$$$$\      $$ |    $$ |     $$ |         \$$$$$$\    $$ |   $$ |  $$ |             
+    $$  __|     $$ |    $$ |     $$ |          \____$$\   $$ |   $$ |  $$ |             
+    $$ |        $$ |    $$ |     $$ |         $$\   $$ |  $$ |   $$ |  $$ |             
+    $$ |      $$$$$$\ $$$$$$\    $$ |         \$$$$$$  |  $$ |   \$$$$$$  |             
+    \__|      \______|\______|   \__|          \______/   \__|    \______/              
+                                                                                        
+                                                                                           
+                                                                                         
+   $$\   $$\           $$\  $$$$$$\             $$$$$$\                                
+   $$ |  $$ |          \__|$$  __$$\           $$  __$$\                               
+   $$ |  $$ |$$$$$$$\  $$\ $$ /  \__|$$\   $$\ $$ /  \__| $$$$$$\   $$$$$$\   $$$$$$\  
+   $$ |  $$ |$$  __$$\ $$ |$$$$\     $$ |  $$ |$$ |      $$  __$$\ $$  __$$\ $$  __$$\ 
+   $$ |  $$ |$$ |  $$ |$$ |$$  _|    $$ |  $$ |$$ |      $$ /  $$ |$$ |  \__|$$$$$$$$ |
+   $$ |  $$ |$$ |  $$ |$$ |$$ |      $$ |  $$ |$$ |  $$\ $$ |  $$ |$$ |      $$   ____|
+   \$$$$$$  |$$ |  $$ |$$ |$$ |      \$$$$$$$ |\$$$$$$  |\$$$$$$  |$$ |      \$$$$$$$\ 
+    \______/ \__|  \__|\__|\__|       \____$$ | \______/  \______/ \__|       \_______|
+                                     $$\   $$ |                                        
+                                     \$$$$$$  |                                        
+                                      \______/                                      
+
+UnifyCore project developed on FIIT STU (Faculty of informatics and information technologies, Slovak university of technology in Bratislava). Unifycore is a simplistic SDN based GPRS network architecture.
+
 Credits to all projects used go to:
 - Ryu SDN framework   http://osrg.github.io/ryu/
 - CPqD/ofsoftswitch13 https://github.com/CPqD/ofsoftswitch13
@@ -84,9 +108,29 @@ NOTE: The script is written for our test topology, update the interaces accordin
 7. Have fun!
 
 
-SAMPLE DEPLOYMENT TOPOLOGIES
+SAMPLE DEPLOYMENT TOPOLOGY
 -----------------------------
-TBD
+
+                |--------|
+                |  vgsn0 |
+                |--------|
+                    |			   
+                    |a2			   
+    |------| a1 |--------|a3      b1 |--------|b3   c1|--------|c3
+    | bss0 |----| X0000a |-----------| X0000b |-------| X0000c |-------
+    |------|    |--------|           |--------|       |--------|    internet0
+                    |a4             /b2                     |c2
+                    |      /-------/                        |
+                    |d1	  /d2                               |e2 
+                |--------|                            |--------|  
+                | X0000d |----------------------------| X0000e |
+                |--------|d3                       e1 |--------|
+
+
+- bss0      Base Station Subsystem - in our case sysmoBTS model
+- vgsn0     Interface towards combined GPRS signalization entity - vgsn
+- internet0 Internet backbone interface
+- X0000X    ofsoftswitch13 OpenFlow forwarders 
 
 
 DEBUG
