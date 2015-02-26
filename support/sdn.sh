@@ -1,4 +1,6 @@
 #!/bin/bash
+# start-up script for the whole unifycore topology (both forwarders and controllers)
+
 
 if [[ $EUID -ne 0 ]]; then
     echo 'Dont forget to use sudo ;-)'
@@ -6,7 +8,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 FWD_ROOT="/root/ofsoftswitch13"
-CNT_SCRIPT="/root/ryu/ryu/app/experimenter_switch_in_progres.py"
+CNT_SCRIPT="/root/ryu/ryu/app/magic.py"
 #CNT_SCRIPT="/root/ryu/ryu/app/hub.py"
 
 CONTROLLER="tcp:127.0.0.1:6633"
@@ -38,7 +40,7 @@ function start_cnt() {
 }
 
 function do_start() {
-  # velka topologia podla dokumentacie
+  # big topology from the project documentation (and README)
 	start_fwd a 00000000000a 'eth2,corea2,corea3,corea4'
 	start_fwd b 00000000000b 'coreb1,coreb2,coreb3'
 	start_fwd c 00000000000c 'corec1,corec2,corec3'
