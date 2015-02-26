@@ -183,15 +183,15 @@ USEFUL SCRIPTS
 --------------
 
 1. Installation
-- installs all applications and dependencies needed to run the project
+-installs all applications and dependencies needed to run the project
 unifycore/support/install_core.sh
 
 2. Deployment
-- sets up the virtual interfaces, fotwarders and links between them (sample topology)
+-sets up the virtual interfaces, fotwarders and links between them (sample topology)
 unifycore/support/network_init.sh
 
 3. Running the mobile SDN core
-- starts/stops/restarts the controllers and forwarders
+-starts/stops/restarts the controllers and forwarders
 unifycore/support/sdn.sh [start|stop|restart]
 
 
