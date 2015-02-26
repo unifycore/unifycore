@@ -38,7 +38,8 @@ Credits to all projects used go to:
 - OpenGGSN            http://sourceforge.net/projects/ggsn/
 
 
-
+THE TEAM
+---------
 
 Tech Leads:
 ****************************************
@@ -57,8 +58,8 @@ Feature developers (work in progress)
 - Rudolf Grezo (Tunnel management and traffic engineering developement)
 - Marek Hasin (LTE feature developement)
 - Michal Palatinus (Observation and management GUI developement)
-- Matus Krizan
-- Peter Balga
+- Matus Krizan (Topology processing developement)
+- Peter Balga (Yang module developement)
 
 
 
@@ -71,6 +72,10 @@ Prerequisities (tested setup):
 - Oracle VirtualBox 4.3.20r96997
 - Ubuntu Server 14.04 amd64 (not 14.04.1)
 - Sources from the Unifycore GitHub (https://github.com/unifycore/unifycore)
+- Virtual machine should have 3 interfaces
+  - eth0 - towards Internet
+  - eth1 - for optional telnet from host
+  - eth2 - connection with physical BTS
 
 Optional:
 OpenBSC compliant BTS (hardware of software emulation) in order to experiment with GSM/GPRS part of the technology (we use sysmocom sysmoBTS and it is working).
@@ -109,20 +114,23 @@ NOTE: The script is written for our test topology, update the interaces accordin
 SAMPLE DEPLOYMENT TOPOLOGY
 -----------------------------
 
-                |--------|
-                |  vgsn0 |
-                |--------|
-                    |			   
-                    |a2			   
-    |------| a1 |--------|a3      b1 |--------|b3   c1|--------|c3
-    | bss0 |----| X0000a |-----------| X0000b |-------| X0000c |-------
-    |------|    |--------|           |--------|       |--------|    internet0
-                    |a4             /b2                     |c2
-                    |      /-------/                        |
-                    |d1	  /d2                               |e2 
-                |--------|                            |--------|  
-                | X0000d |----------------------------| X0000e |
-                |--------|d3                       e1 |--------|
+               /
+               /          |--------|
+               /          |  vgsn0 |
+               /          |--------|
+    (|)        /              |			   
+     |         /              |a2			   
+     |------|  /eth2    a1|--------|a3       b1|--------|b3   c1|--------|c3       iptables---> eth0
+     | bss0 |-------------| X0000a |-----------| X0000b |-------| X0000c |---------------
+     |------|  /          |--------|           |--------|       |--------|internet0
+               /              |a4             /b2                   |c2
+               /              |      /-------/                      |
+               /              |d1   /d2                             |e2 
+               /          |--------|                            |--------|  
+               /          | X0000d |----------------------------| X0000e |
+               /          |--------|d3                        e1|--------|
+               /
+               /LINUX MACHINE-----------------------------------------------------------
 
 
 - bss0      Base Station Subsystem - in our case sysmoBTS model
