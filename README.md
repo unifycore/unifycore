@@ -171,32 +171,32 @@ COMMON ISSUES
 File "/usr/lib/python2.7/dist-packages/pkg_resources.py", line 628, in resolve
     raise DistributionNotFound(req)
 pkg_resources.DistributionNotFound: pbr>=0.6,!=0.7,<1.0
-- wrong version of python-pbr installed. Install different version o pbr, for example from pip
+  - wrong version of python-pbr installed. Install different version o pbr, for example from pip
 
 2. Traceback (in /tmp/controller.log)
 ...
 ImportError: No module named magic
-- wrong path in the FWD_ROOT and CNT_SCRIPT variables in sdn.sh launch script. Correct the path according to your setup (where is your ofsoftswitch and ryu installed).
+  - wrong path in the FWD_ROOT and CNT_SCRIPT variables in sdn.sh launch script. Correct the path according to your setup (where is your ofsoftswitch and ryu installed).
 
 
 USEFUL SCRIPTS
 --------------
 
 1. Installation
--installs all applications and dependencies needed to run the project
+- installs all applications and dependencies needed to run the project
 unifycore/support/install_core.sh
 
 2. Deployment
--sets up the virtual interfaces, fotwarders and links between them (sample topology)
+- sets up the virtual interfaces, fotwarders and links between them (sample topology)
 unifycore/support/network_init.sh
 
 3. Running the mobile SDN core
--starts/stops/restarts the controllers and forwarders
+- starts/stops/restarts the controllers and forwarders
 unifycore/support/sdn.sh [start|stop|restart]
 
 
 SUPPORT
 --------
 
-unifycore-dev[at]googlegroups.com
-unifycore.com (documentation in slovak, documentation in english comming soon...)
+- unifycore-dev[at]googlegroups.com
+- unifycore.com (documentation in slovak, documentation in english comming soon...)
