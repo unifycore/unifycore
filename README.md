@@ -52,7 +52,7 @@ Lead Developers: (in alphabetical order)
 - Martin Kalcok
 - Jan Skalny
 
-Feature developers (work in progress)
+Feature developers: (work in progress)
 *****************************************
 - Kamil Burda (Port Control Protocol (PCP) NAT feature developement)
 - Rudolf Grezo (Tunnel management and traffic engineering developement)
@@ -143,10 +143,10 @@ DEBUG
 ------
 
 1. Logs of the unifycore are located in /tmp
-controller.log
-dpa.log
-dpb.log
-....
+- controller.log
+- dpa.log
+- dpb.log
+- ...
 
 2. Restart of the solution/topology
 unifycore/support/sdn.sh [start|stop|restart]
@@ -166,12 +166,12 @@ COMMON ISSUES
 File "/usr/lib/python2.7/dist-packages/pkg_resources.py", line 628, in resolve
     raise DistributionNotFound(req)
 pkg_resources.DistributionNotFound: pbr>=0.6,!=0.7,<1.0
--wrong version of python-pbr installed. Install different version o pbr, for example from pip
+- wrong version of python-pbr installed. Install different version o pbr, for example from pip
 
 2. Traceback (in /tmp/controller.log)
 ...
 ImportError: No module named magic
--wrong path in the FWD_ROOT and CNT_SCRIPT variables in sdn.sh launch script. Correct the path according to your setup (where is your ofsoftswitch and ryu installed).
+- wrong path in the FWD_ROOT and CNT_SCRIPT variables in sdn.sh launch script. Correct the path according to your setup (where is your ofsoftswitch and ryu installed).
 
 
 USEFUL SCRIPTS
