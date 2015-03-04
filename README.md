@@ -163,6 +163,9 @@ ryu/ryu/app/magic.py
 4. Topology dump to JSON available at
 127.0.0.1:8080/topology/dump
 
+5. Status info about topology available at
+127.0.0.1:8080/test/info
+
 
 COMMON ISSUES
 --------------
