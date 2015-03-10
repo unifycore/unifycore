@@ -11,6 +11,7 @@ sudo update-alternatives --set editor /usr/bin/vim.nox
 
 apt-get install -y libdbi0-dev libdbd-sqlite3 build-essential libtool autoconf automake git-core pkg-config libortp-dev build-essential unzip cmake libpcap-dev libxerces-c2-dev libpcre3-dev flex bison pkg-config autoconf automake libtool libboost-dev rsync git subversion libcurl4-openssl-dev python-setuptools python-pip python-dev dnsmasq valgrind
 
+apt-get install -y libpcsclite-dev
 
 # don't forget to change this crendentials to actual github credentials
 # for committing to the Unifycore repository, setup the ssh keys (guide available on github)
