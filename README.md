@@ -198,6 +198,10 @@ unifycore/support/network_init.sh
 -starts/stops/restarts the controllers and forwarders
 unifycore/support/sdn.sh [start|stop|restart]
 
+4. AutoTest
+-You can check the functionality of the UnifyCore modules by running simple tests
+in /unifycore/test (work in progress)
+
 
 SUPPORT
 --------
