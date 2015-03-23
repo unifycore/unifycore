@@ -92,9 +92,6 @@ https://github.com/unifycore
 NOTE: We use our custom branches of ofsoftswitch, ryu (with GPRS extensions) and custom vGSN based on osmo-sgsn and OpenGGSN. 
 
 4. Check the version of python-pbr (apt-cache show python-pbr). If the version is lower than 0.6, or higher than 1.0, or equal to 0.7, you need a different version (get it by pip).
-  - sudo apt-get remove python-pbr
-  - sudo pip install pbr
-
 Wrong version of python pbr will be indicated when running the solution by following traceback (in the log file /tmp/controller.log)
 Traceback (most recent call last):
 ...
@@ -102,6 +99,8 @@ File "/usr/lib/python2.7/dist-packages/pkg_resources.py", line 628, in resolve
     raise DistributionNotFound(req)
 pkg_resources.DistributionNotFound: pbr>=0.6,!=0.7,<1.0
 NOTE: 0.10.7 is known to work (pbr -v)
+  - sudo apt-get remove python-pbr
+  - sudo pip install pbr
 
 5. Deploy the topology by executing the following script
 unifycore/support/network_init.sh
