@@ -92,8 +92,8 @@ https://github.com/unifycore
 NOTE: We use our custom branches of ofsoftswitch, ryu (with GPRS extensions) and custom vGSN based on osmo-sgsn and OpenGGSN. 
 
 4. Check the version of python-pbr (apt-cache show python-pbr). If the version is lower than 0.6, or higher than 1.0, or equal to 0.7, you need a different version (get it by pip).
-sudo apt-get remove python-pbr
-sudo pip install pbr
+  - sudo apt-get remove python-pbr
+  - sudo pip install pbr
 
 Wrong version of python pbr will be indicated when running the solution by following traceback (in the log file /tmp/controller.log)
 Traceback (most recent call last):
@@ -187,19 +187,19 @@ USEFUL SCRIPTS
 --------------
 
 1. Installation
--installs all applications and dependencies needed to run the project
+  - installs all applications and dependencies needed to run the project
 unifycore/support/install_core.sh
 
 2. Deployment
--sets up the virtual interfaces, fotwarders and links between them (sample topology)
+  - sets up the virtual interfaces, fotwarders and links between them (sample topology)
 unifycore/support/network_init.sh
 
 3. Running the mobile SDN core
--starts/stops/restarts the controllers and forwarders
+  - starts/stops/restarts the controllers and forwarders
 unifycore/support/sdn.sh [start|stop|restart]
 
 4. AutoTest
--You can check the functionality of the UnifyCore modules by running simple tests
+  - You can check the functionality of the UnifyCore modules by running simple tests
 in /unifycore/test (work in progress)
 
 
