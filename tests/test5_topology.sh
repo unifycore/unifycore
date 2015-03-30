@@ -32,7 +32,7 @@ if [ $linksCount -eq 16 ]; then
    echo "OK: Topology has correct number of links "
 else
    echo "ERROR: Topology has different number of links than sample topology"
-   resul="NOK"
+   result="NOK"
 fi
 
 
