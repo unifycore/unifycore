@@ -8,7 +8,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 FWD_ROOT="/home/unifycore/ofsoftswitch13"
-CNT_SCRIPT="/home/unifycore/ryu/ryu/app/WMNC_magic.py"
+CNT_SCRIPT="/home/unifycore/ryu/ryu/app/iPerf_magic.py"
 #CNT_SCRIPT="/root/ryu/ryu/app/hub.py"
 
 CONTROLLER="tcp:127.0.0.1:6633"
