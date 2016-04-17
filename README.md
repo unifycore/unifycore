@@ -108,7 +108,9 @@ NOTE: The script is written for our test topology, update the interaces accordin
 
 6. Update FWD_ROOT and CNT_SCRIPT variables in the launch script (unifycore/support/sdn.sh) according to your setup. Run the controller by executing the script
 
-7. Have fun!
+7. Run the test scripts from /unifycore/test directory. There do not cover all the possible problems with the system, but still better than nothing (and still in developement).
+
+8. Have fun!
 
 
 SAMPLE DEPLOYMENT TOPOLOGY
