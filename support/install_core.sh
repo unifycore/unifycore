@@ -11,12 +11,12 @@ sudo update-alternatives --set editor /usr/bin/vim.nox
 
 apt-get install -y libdbi0-dev libdbd-sqlite3 build-essential libtool autoconf automake git-core pkg-config libortp-dev build-essential unzip cmake libpcap-dev libxerces-c2-dev libpcre3-dev flex bison pkg-config autoconf automake libtool libboost-dev rsync git subversion libcurl4-openssl-dev python-setuptools python-pip python-dev dnsmasq valgrind
 
-apt-get install -y libpcsclite-dev jq
+apt-get install -y libpcsclite-dev jq libffi-dev python-paramiko python-oslo.config
 
 # don't forget to change this crendentials to actual github credentials
 # for committing to the Unifycore repository, setup the ssh keys (guide available on github)
-git config --global user.name "Jan Skalny"
-git config --global user.email jan@skalny.sk
+git config --global user.name "Tibor Hirjak"
+git config --global user.email hirjak.tibor@gmail.com
 
 cd
 git clone git://git.osmocom.org/libosmocore.git
@@ -27,6 +27,7 @@ git clone git://github.com/unifycore/openbsc.git
 git clone git://github.com/unifycore/unifycore.git
 git clone git://github.com/unifycore/ryu.git
 git clone git://github.com/unifycore/ofsoftswitch13.git
+git clone https://github.com/unifycore/bss-sim.git
 
 cd ~/ryu ; git remote set-url origin git@github.com:unifycore/ryu.git
 cd ~/ofsoftswitch13 ; git remote set-url origin git@github.com:unifycore/ofsoftswitch13.git
@@ -61,7 +62,15 @@ make install
 cd ~/ryu
 python ./setup.py install
 pip install networkx
-
+pip install debtcollector
+pip install stevedore
+pip install greenlet
+#easy_install pip
+easy_install cryptography
+pip install netaddr
+pip install webob
+pip install routes
+pip install eventlet
 
 echo "172.20.255.254  internet" >> /etc/hosts
 echo "dhcp-range=192.168.27.100,192.168.27.200,12h" >> /etc/dnsmasq.conf

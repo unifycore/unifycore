@@ -8,7 +8,7 @@ if [[ $EUID -ne 0 ]]; then
 fi
 
 FWD_ROOT="/root/ofsoftswitch13"
-CNT_SCRIPT="/root/ryu/ryu/app/magic.py"
+CNT_SCRIPT="/root/ryu/ryu/app/roaming_magic.py"
 #CNT_SCRIPT="/root/ryu/ryu/app/hub.py"
 
 CONTROLLER="tcp:127.0.0.1:6633"
