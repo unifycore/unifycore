@@ -3,7 +3,7 @@ gprs-sdn
     | ------------------------------------------------- |
     |                                                   |
     | File:   UnifyCore ReadMe and Installation guide   |
-    | Date:   2-19-2015                                 |
+    | Date:   4-17-2016                                 |
     | Author: Martin Nagy                               |
     |                                                   |
     | ------------------------------------------------- |
@@ -32,7 +32,7 @@ gprs-sdn
 
 UnifyCore project developed on FIIT STU (Faculty of informatics and information technologies, Slovak university of technology in Bratislava). Unifycore is a simplistic SDN based GPRS network architecture.
 
-Credits to all projects used go to:
+Credits to all projects used go to (Many thanks, helped a lot!):
 - Ryu SDN framework   http://osrg.github.io/ryu/
 - CPqD/ofsoftswitch13 https://github.com/CPqD/ofsoftswitch13
 - OpenBSC suite       http://openbsc.osmocom.org/trac/wiki/OpenBSC
@@ -53,14 +53,14 @@ Lead Developers: (in alphabetical order)
 - Martin Kalcok
 - Jan Skalny
 
-Feature developers: (work in progress)
+Feature developers: 
 *****************************************
-- Kamil Burda (Port Control Protocol (PCP) NAT feature developement)
-- Rudolf Grezo (Tunnel management and traffic engineering developement)
-- Marek Hasin (LTE feature developement)
-- Michal Palatinus (Observation and management GUI developement)
-- Matus Krizan (Topology processing developement)
-- Peter Balga (Yang module developement)
+- Kamil Burda (DONE, Port Control Protocol (PCP) NAT feature developement)
+- Rudolf Grezo (work in progress, Tunnel management and traffic engineering developement)
+- Michal Palatinus (DONE, Observation and management GUI developement)
+- Matus Krizan (DONE, Topology processing developement)
+- Marek Hasin (POSTPONED, LTE feature developement)
+- Peter Balga (POSTPONED, Yang module developement)
 
 
 
@@ -80,7 +80,7 @@ Prerequisities (tested setup):
 
 Optional:
 OpenBSC compliant BTS (hardware of software emulation) in order to experiment with GSM/GPRS part of the technology (we use sysmocom sysmoBTS and it is working).
-WARNING: Operating your own GSM/GPRS network without permission from the local regulator or without a faraday cage may be against your local laws.
+WARNING: Operating your own GSM/GPRS network without permission from the local regulator or without a faraday cage may be against  local laws.
 
 1. Install Ubuntu 14.04 (not 14.04.1), 64-bit version (amd64), server (Ubuntu desktop might work as well)
 http://releases.ubuntu.com/14.04/
@@ -108,7 +108,9 @@ NOTE: The script is written for our test topology, update the interaces accordin
 
 6. Update FWD_ROOT and CNT_SCRIPT variables in the launch script (unifycore/support/sdn.sh) according to your setup. Run the controller by executing the script
 
-7. Have fun!
+7. Run the test scripts from /unifycore/test directory. There do not cover all the possible problems with the system, but still better than nothing (and still in developement).
+
+8. Have fun!
 
 
 SAMPLE DEPLOYMENT TOPOLOGY
@@ -157,7 +159,7 @@ DEBUG
 unifycore/support/sdn.sh [start|stop|restart]
 
 3. controller source
-ryu/ryu/app/magic.py
+ryu/ryu/app/magic.py (other controller versions exist, please see below)
 
 4. Topology dump to JSON available at
 127.0.0.1:8080/topology/dump
@@ -207,3 +209,11 @@ SUPPORT
 
 - unifycore-dev[at]googlegroups.com
 - unifycore.com (documentation in slovak, documentation in english comming soon...)
+
+
+Developement versions (We seriously need to merge all those :( )
+--------
+- magic.py (very first version of the controller, concieved by the original team )
+- roaming_magic.py (Tibor's version supporting roaming between multiple Unifycore networks - Many thanks!)
+- iPerf_magic.py (There was a time, when Martin wanted to evaluate the performance of the solution. Unfortunately he did not managed to finish that)
+- Have to find Michal's sources with the Web frontend integration

@@ -15,8 +15,8 @@ apt-get install -y libpcsclite-dev jq libffi-dev python-paramiko python-oslo.con
 
 # don't forget to change this crendentials to actual github credentials
 # for committing to the Unifycore repository, setup the ssh keys (guide available on github)
-git config --global user.name "Jan Skalny"
-git config --global user.email jan@skalny.sk
+git config --global user.name "Tibor Hirjak"
+git config --global user.email hirjak.tibor@gmail.com
 
 cd
 git clone git://git.osmocom.org/libosmocore.git
@@ -27,6 +27,7 @@ git clone git://github.com/unifycore/openbsc.git
 git clone git://github.com/unifycore/unifycore.git
 git clone git://github.com/unifycore/ryu.git
 git clone git://github.com/unifycore/ofsoftswitch13.git
+git clone https://github.com/unifycore/bss-sim.git
 
 cd ~/ryu ; git remote set-url origin git@github.com:unifycore/ryu.git
 cd ~/ofsoftswitch13 ; git remote set-url origin git@github.com:unifycore/ofsoftswitch13.git
