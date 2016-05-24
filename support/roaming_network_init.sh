@@ -102,7 +102,6 @@ ip netns exec 90170 ifconfig sig2 192.168.28.1/24 up
 ip route add 172.20.85.0/24 dev internet1
 ip route add 172.21.85.0/24 dev internet2
 
-
 #add IP routes to allow signaling communication between the namespaces
 ip netns exec 23101 ip route add 192.168.28.0/24 dev sig1
 ip netns exec 90170 ip route add 192.168.27.0/24 dev sig2
@@ -115,9 +114,17 @@ ip netns exec 90170 ifconfig lo 127.0.0.1/8 up
 ip netns exec 23101 ifconfig vgsn1 192.168.27.2/24 up
 ip netns exec 90170 ifconfig vgsn2 192.168.28.2/24 up
 
+#add IP routes to allow signalling communication from vGSNs in namespaces tp the BSS simulator
+ip netns exec 23101 ip route add 192.168.25.0/24 dev vgsn1
+ip netns exec 90170 ip route add 192.168.26.0/24 dev vgsn2
+
 #disable checksum offloading due to kernel bug on veth interfaces
 ip netns exec 23101 ethtool --offload vgsn1 rx off tx off
 ip netns exec 90170 ethtool --offload vgsn2 rx off tx off
+
+#disable checksum offloading on BSS interfaces
+ethtool --offload bss1 tx off rx off
+ethtool --offload bss2 tx off rx off
 
 #configure IP addresses on internet interfaces
 ifconfig internet1 172.20.255.254/16 up
