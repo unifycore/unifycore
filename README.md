@@ -56,9 +56,10 @@ Lead Developers: (in alphabetical order)
 Feature developers: 
 *****************************************
 - Kamil Burda (DONE, Port Control Protocol (PCP) NAT feature developement)
-- Rudolf Grezo (work in progress, Tunnel management and traffic engineering developement)
+- Rudolf Grezo (DONE, Tunnel management and traffic engineering developement)
 - Michal Palatinus (DONE, Observation and management GUI developement)
 - Matus Krizan (DONE, Topology processing developement)
+- Michal Grznar (IN PROGRESS, OpenCL acceleration)
 - Marek Hasin (POSTPONED, LTE feature developement)
 - Peter Balga (POSTPONED, Yang module developement)
 
@@ -216,4 +217,7 @@ Developement versions (We seriously need to merge all those :( )
 - magic.py (very first version of the controller, concieved by the original team )
 - roaming_magic.py (Tibor's version supporting roaming between multiple Unifycore networks - Many thanks!)
 - iPerf_magic.py (There was a time, when Martin wanted to evaluate the performance of the solution. Unfortunately he did not managed to finish that)
+- new fork of ofsoftswitch (used for OpenCL acceleration evaluation)
+- iPerf_magic_TE.py (Rudo's version of the controller with support of monitoring and traffic engineering)
 - Have to find Michal's sources with the Web frontend integration
+
