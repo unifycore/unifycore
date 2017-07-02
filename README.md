@@ -3,7 +3,7 @@ gprs-sdn
     | ------------------------------------------------- |
     |                                                   |
     | File:   UnifyCore ReadMe and Installation guide   |
-    | Date:   4-17-2016                                 |
+    | Date:   2017-07-02                                |
     | Author: Martin Nagy                               |
     |                                                   |
     | ------------------------------------------------- |
@@ -35,8 +35,8 @@ UnifyCore project developed on FIIT STU (Faculty of informatics and information 
 Credits to all projects used go to (Many thanks, helped a lot!):
 - Ryu SDN framework   http://osrg.github.io/ryu/
 - CPqD/ofsoftswitch13 https://github.com/CPqD/ofsoftswitch13
-- OpenBSC suite       http://openbsc.osmocom.org/trac/wiki/OpenBSC
-- OpenGGSN            http://sourceforge.net/projects/ggsn/
+- OpenBSC suite       http://osmocom.org/projects/openbsc/wiki/OpenBSC
+- OpenGGSN            https://osmocom.org/projects/openggsn/wiki/OpenGGSN
 
 
 THE TEAM
@@ -59,9 +59,10 @@ Feature developers:
 - Rudolf Grezo (DONE, Tunnel management and traffic engineering developement)
 - Michal Palatinus (DONE, Observation and management GUI developement)
 - Matus Krizan (DONE, Topology processing developement)
-- Michal Grznar (IN PROGRESS, OpenCL acceleration)
-- Marek Hasin (POSTPONED, LTE feature developement)
-- Peter Balga (POSTPONED, Yang module developement)
+- Michal Grznar (DONE, OpenCL acceleration)
+- Marek Hasin (CANCELED :-/, LTE feature developement)
+- Peter Balga (CANCELED :-/, Yang module developement)
+- Tibor Hirjak (DONE, Roaming withing 2 SDN cores & lovely 2G/GPRS BTS/BSS simulator)
 
 
 
